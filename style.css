@@ -1,0 +1,161 @@
+/******************************************************** RESET ********************************************************/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/******************************************************** UTILITY COMPONENTS ********************************************************/
+:root {
+  font-family: 62.5%;
+
+  --primary-color: #161616;
+
+  --primary-color-m: #3a3939;
+
+  --secondary-color: #ffffff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+
+  background: var(--primary-color);
+}
+
+/* Lists */
+ul {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+/* Links */
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/******************************************************** MAIN STYLED ********************************************************/
+#app {
+  height: 100vh;
+}
+
+/******************************************************** HEADER STYLED ********************************************************/
+header {
+  padding: 1.5rem 0rem;
+}
+
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+/******************************************************** GAME SECTION ********************************************************/
+section#game {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.game__play,
+.game__info {
+  padding: 1rem calc(3.5rem + 0.66667vh);
+
+  flex-basis: 30rem;
+  flex-grow: 1;
+}
+
+/******************************************************** PLAYER CONTAINER ********************************************************/
+.game__play__container {
+  display: flex;
+  align-items: center;
+}
+
+.game__play__container i {
+  margin: 0 calc(1.6rem + 1vw);
+
+  color: var(--secondary-color);
+  font-size: calc(1.3rem + 1.1vw);
+}
+
+.game__play__container input,
+.game__play__container--number-value {
+  width: calc(3rem + 10vw);
+  height: calc(3rem + 10vw);
+
+  background: var(--primary-color-m);
+  border: 0;
+}
+
+.game__play__container input,
+.game__play__container--number-value i {
+  font-size: calc(1.8rem + 1.3vw);
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.game__play__container--number-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__play--info p {
+  margin-top: calc(1.3rem + 4vh);
+
+  font-size: calc(1.2rem + 0.2vw);
+  font-weight: 100;
+  color: var(--secondary-color);
+}
+
+/******************************************************** GAME INFO ********************************************************/
+.game__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  text-align: center;
+}
+
+.game__info--tip {
+  font-size: calc(1.3rem + 0.5vw);
+  color: var(--secondary-color);
+}
+
+.game__info__content__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game__info__content__social li {
+  margin: 1rem calc(0.7rem + 2vw);
+}
+
+.game__info__content__social li a {
+  font-size: calc(2.5rem + 1vw);
+}
+
+/******************************************************** (MIN-WIDTH: 1510px) ********************************************************/
+@media screen and (min-width: 1510px) {
+  #app {
+    width: 1510px;
+    margin: 0 auto;
+  }
+
+  section#game {
+    flex-wrap: nowrap;
+  }
+}
+
+/******************************************************** (MAX-WIDTH: 1000px) ********************************************************/
+@media screen and (max-width: 1000px) {
+  .game__play__container {
+    justify-content: center;
+  }
+}
