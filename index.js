@@ -41,7 +41,7 @@ form.addEventListener('submit', function (e) {
   const playerChoice = +labelPlayerNumber.value;
 
   // Invalid value
-  if (playerChoice > 15 || playerChoice < 0) {
+  if (playerChoice > 15 || playerChoice <= 0) {
     labelTips.textContent = 'Number invalid ❌';
     return false;
   }
