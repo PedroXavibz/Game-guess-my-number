@@ -88,11 +88,14 @@ section#game {
   width: calc(3rem + 10vw);
   height: calc(3rem + 10vw);
 
+  font-size: calc(1.8rem + 1.3vw);
+  color: var(--secondary-color);
+  text-align: center;
+
   background: var(--primary-color-m);
   border: 0;
 }
 
-.game__play__container input,
 .game__play__container--number-value i {
   font-size: calc(1.8rem + 1.3vw);
   color: var(--secondary-color);
@@ -117,14 +120,37 @@ section#game {
 .game__info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-
-  text-align: center;
 }
 
 .game__info--tip {
   font-size: calc(1.3rem + 0.5vw);
   color: var(--secondary-color);
+}
+
+.btn-play-again {
+  width: 9.5rem;
+  height: 3.6rem;
+
+  border: 0;
+  border-radius: 0.6rem;
+  background: var(--primary-color-m);
+  color: var(--secondary-color);
+
+  font-size: 1.3rem;
+
+  cursor: pointer;
+  transition: all 0.45s cubic-bezier(1, 0, 0, 1);
+}
+
+.btn-play-again:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.hidden {
+  transform: scale(0);
 }
 
 .game__info__content__social {
@@ -139,6 +165,13 @@ section#game {
 
 .game__info__content__social li a {
   font-size: calc(2.5rem + 1vw);
+
+  transition: 0.5s ease-in;
+}
+
+.game__info__content__social li a:active,
+.game__info__content__social li a:hover {
+  color: var(--primary-color-m);
 }
 
 /******************************************************** (MIN-WIDTH: 1510px) ********************************************************/
