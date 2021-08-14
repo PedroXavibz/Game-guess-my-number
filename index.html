@@ -5,6 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess my number</title>
+    <!-- Style css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/dcf3890342.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <main id="app">
+      <header id="header">
+        <svg width="900" height="120" xmlns="http://www.w3.org/2000/svg">
+          <g id="Layer_1">
+            <title>Layer 1</title>
+            <text
+              transform="matrix(1 0 0 1 0 0)"
+              xml:space="preserve"
+              text-anchor="start"
+              font-family="'Poppins SemiBold'"
+              font-size="42"
+              stroke-width="0"
+              id="svg_1"
+              y="74.5"
+              x="255.16406"
+              stroke="#000"
+              fill="#000000"
+            >
+              GUESS MY NUMBER
+            </text>
+            <ellipse
+              ry="41.5"
+              rx="41.5"
+              id="svg_2"
+              cy="60"
+              cx="365"
+              stroke="#000"
+              fill="#020202"
+            />
+          </g>
+        </svg>
+      </header>
+      <section id="game">
+        <div class="game__play">
+          <div class="game__play__container">
+            <input class="game__play__container--player-number" type="number" />
+            <i class="fas fa-arrow-right"></i>
+            <span class="game__play__container--number-value">?</span>
+          </div>
+
+          <div class="game__play--info">
+            <p>Choice a number between 1 and 15 📝</p>
+            <p>Number of attemps: <span class="attemps">10</span> 🔃</p>
+            <p>Score: <span class="score">0</span> 🏆</p>
+          </div>
+        </div>
+
+        <div class="game__info">
+          <h3 class="game__info--tip">Choice a number</h3>
+
+          <div class="game__info__social">
+            <ul>
+              <li class="game__info__social--linkedin">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li class="game__info__social--github">
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li class="game__info__social--email">
+                <a href="#">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
