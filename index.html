@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess my number</title>
+    <link rel="shortcut icon" href="fav.ico" type="image/x-icon" />
     <!-- Style css -->
     <link rel="stylesheet" href="style.css" />
 
@@ -27,7 +28,7 @@
       </header>
       <section id="game">
         <div class="game__play">
-          <div class="game__play__container">
+          <form class="game__play__container">
             <input
               class="game__play__container--player-number"
               name="player-input"
@@ -37,7 +38,7 @@
             <span class="game__play__container--number-value"
               ><i class="fas fa-question"></i
             ></span>
-          </div>
+          </form>
 
           <div class="game__play--info">
             <p>Choice a number between 1 and 15 📝</p>
@@ -48,6 +49,8 @@
 
         <div class="game__info">
           <h3 class="game__info--tip">Choice a number</h3>
+
+          <button class="btn-play-again hidden">Play again</button>
 
           <div class="game__info__content">
             <ul class="game__info__content__social">
@@ -71,5 +74,7 @@
         </div>
       </section>
     </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
