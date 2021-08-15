@@ -16,10 +16,6 @@ const generateNumber = function () {
   return Math.trunc(Math.random() * 15) + 1;
 };
 
-const resetGame = function () {
-  return false;
-};
-
 let value = generateNumber();
 let attemps = 10;
 let score = 0;
